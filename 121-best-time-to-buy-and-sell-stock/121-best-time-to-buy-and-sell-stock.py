@@ -8,7 +8,6 @@ class Solution:
                 
         minimum=prices[0]
         maxprofit=0
-        min1=0
         for i in range(1, len(prices)):
             maxprofit=max(maxprofit,prices[i]-minimum)
             minimum=min(prices[i],minimum)
