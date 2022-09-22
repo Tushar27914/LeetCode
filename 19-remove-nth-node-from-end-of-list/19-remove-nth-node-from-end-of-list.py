@@ -11,7 +11,7 @@ class Solution:
             curr=curr.next
             count+=1
         k=count-n+1
-        if k==1:
+        if(k==1):
             head=head.next
             return head
         else:
@@ -21,7 +21,24 @@ class Solution:
                 prev=curr
                 curr=curr.next
             prev.next=curr.next
-            return head
+        return head
+        # curr=head
+        # count=1
+        # while curr.next!=None:
+        #     curr=curr.next
+        #     count+=1
+        # k=count-n+1
+        # if k==1:
+        #     head=head.next
+        #     return head
+        # else:
+        #     curr=head
+        #     prev=head
+        #     for i in range(1,k):
+        #         prev=curr
+        #         curr=curr.next
+        #     prev.next=curr.next
+        #     return head
                 
         # curr=head
         # count=1
