@@ -11,7 +11,7 @@ class Node:
 '''
 
 #Function to return a list containing elements of left view of the binary tree.
-from collections import *
+#from collections import *
 def LeftView(root):
     s=[]
     if root is None:
