@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        if(root is not None and root.left is None and root.right is None):
+            return True
+        if(root.left is not None and root.right is not None):
+            return self.symmetric(root.left, root.right)
+        
     def symmetric(self,a,b):
         if a is None and b is None:
             return True
@@ -14,8 +20,5 @@ class Solution:
             return True
         else:
             return False
-
-    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-        return self.symmetric(root,root)
+            
         
-    
