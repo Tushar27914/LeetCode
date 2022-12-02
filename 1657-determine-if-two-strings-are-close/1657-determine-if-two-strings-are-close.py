@@ -20,23 +20,7 @@ class Solution:
         
         
         
-   # word1 = list(word1) 
-   #      word2 = list(word2) 
-   #      if set(word1) != set(word2):
-   #          return False 
-   #      if len(set(word1)) != len(set(word2)):
-   #          return False 
-   #      if len(word1) != len(word2):
-   #          return False 
-   #      if sorted(word1) == sorted(word2):
-   #          return True 
-   #      d1 = sorted(Counter(word1).values()) 
-   #      d2 = sorted(Counter(word2).values())
-   #      if d1 == d2 : 
-   #          return True 
-   #      else:
-   #          return False
-        
+
         
 #         if len(word1)!=len(word2):
 #             return False
