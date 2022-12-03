@@ -1,45 +1,21 @@
-class Solution {
-public:
-    vector<string> topKFrequent(vector<string>& words, int k) {
-        int maxIndex = INT_MIN , minIndex = INT_MAX;
+class Solution:
+    def topKFrequent(self, words: List[str], k: int) -> List[str]:
+        c = Counter(sorted(words)).most_common(k)
+        ans = []
+        for i in range(k):
+            ans.append(c[i][0])
+        return ans
         
-        unordered_map<string , int>a;
-        vector<vector<string>>b(501 ,vector<string>());
-        // frequencyMapping of all words
-        for(auto elements:words)
-        a[elements]++;
+        # d={}
+        # for i in range(len(words)):
+        #     if words[i] in d:
+        #         d[words[i]]+=1
+        #     else:
+        #         d[words[i]]=1
+        # t=[]
+        # sorted_d = dict( sorted(d.items(), key=operator.itemgetter(1),reverse=True))
+        # for i in sorted_d:
+        #     t.append(sorted_d[i])
+        # return t
         
-        // mapping in auxilaryArray
-        for(auto elements:a)
-        {
-            maxIndex = max(elements.second , maxIndex);
-            minIndex = min(elements.second , minIndex);
-            b[elements.second].push_back(elements.first);
-        }
-        vector<string>ans;
-        for(int i = maxIndex;i>=minIndex;i--)
-        {
-              if(b[i].size()>0)
-              {
-                  if(b[i].size() == 1)
-                  {
-                      ans.push_back(b[i][0]);
-                      k--;
-                  }
-                  else
-                  {  
-                      int size = 0;
-                     sort(b[i].begin(),b[i].end());
-                     while(k > 0  && size < b[i].size())
-                     {
-                         ans.push_back(b[i][size++]);
-                         k--;
-                     }
-                  }
-              }
-            if(k == 0)
-            return ans;
-        }
-        return ans;
-    }
-};
+        
