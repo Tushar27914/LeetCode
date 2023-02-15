@@ -22,13 +22,16 @@ def getNthFromLast(head,n):
         curr=curr.next
         count+=1
     k=count-n+1
+    # return(k)
+    
+    if k<0:
+        return -1
     if k<=0:
         return -1
     fast=head
     c=0
     for i in range(1,k):
-            fast=fast.next
-            
+       fast = fast.next
     return fast.data
         
         
