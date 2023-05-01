@@ -3,6 +3,28 @@
 class Solution:
 
     def findMinDiff(self, A,N,M):
+        # ans=[]
+        # A.sort()
+        # ws=0
+        # res=[]
+        # for we in range(N):
+        #     ans.append(A[we])
+        #     if we>=M-1:
+        #         res.append(max(ans)-min(ans))
+        #         ans.remove(A[ws])
+        #         ws+=1
+        # return min(res)
+        
+        
+        # ans=[]
+        # A.sort()
+        # for i in range(N-M+1):
+        #     t=[]
+        #     for j in range(i,i+M):
+        #         t.append(A[j])
+        #     u=max(t)-min(t)
+        #     ans.append(u)
+        # return min(ans)
         i=0
         j=M-1
         d=max(A)
