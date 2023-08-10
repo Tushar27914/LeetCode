@@ -9,11 +9,25 @@ class Node:
 '''
 
 def reverseDLL(head):
-    while head.next!=None:
-        head.next,head.prev,head=head.prev,head.next,head.next
-    head.next,head.prev=head.prev,None
+    stack = []
+    temp = head
+    while temp is not None:
+        stack.append(temp.data)
+        temp = temp.next
+ 
+        # Add all the elements in the stack
+        # in a sequence to the stack
+    temp = head
+    while temp is not None:
+        temp.data = stack.pop()
+        temp = temp.next
     return head
-    #return head after reversing
+    #while head.next!=None:
+        
+    #     head.next,head.prev,head=head.prev,head.next,head.next
+    # head.next,head.prev=head.prev,None
+    # return head
+    # #return head after reversing
 
 
 
